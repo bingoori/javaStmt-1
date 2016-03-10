@@ -50,6 +50,7 @@ public class Kaup {
 	}
 
 	public void setResult() {
+		setKaup();
 		String temp = "";
 		if(kaup>30){
 			temp = "비만";
@@ -69,5 +70,13 @@ public class Kaup {
 		this.result = temp;
 	}
 
+	@Override
+	public String toString() {
+		return "카우푸지수 [이름=" + name + ", + 결과"+ result + "]";
+				
+	}
+
+	
+	
 	
 }

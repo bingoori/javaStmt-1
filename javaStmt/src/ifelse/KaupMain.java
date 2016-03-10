@@ -23,20 +23,14 @@ import java.util.Scanner;
 public class KaupMain {
 	public static void main(String[] args) {
 		// 지역변수 영역		
-		int kaup=0;
-		double height=0.0,weight=0.0;
-		String result="",name=""; // "" 리터럴이라고 명명하겠음
 		Scanner scanner = new Scanner(System.in);
 		Kaup k = new Kaup();
 		System.out.println("이름,키,몸무게 입력");
 		k.setName(scanner.next());
-		
-		name = scanner.next();
-		height = scanner.nextInt();
-		weight = scanner.nextInt();
-		
-		result = k.getResult();
-		System.out.println(name+"님은 "+result+"입니다.");
+		k.setHeight(scanner.nextInt());
+		k.setWeight(scanner.nextInt());
+		k.setResult();
+		System.out.println(k.toString());
 	}
 }
 
